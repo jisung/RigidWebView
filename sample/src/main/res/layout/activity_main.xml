@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffc"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WebView#1"
+            android:textColor="#000"
+            android:background="#f0f"
+            />
+
+        <io.github.jisung.rigidwebview.RigidWebView
+            android:id="@+id/webview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WebView#2"
+            android:textColor="#000"
+            android:background="#f0f"
+            />
+
+        <io.github.jisung.rigidwebview.RigidWebView
+            android:id="@+id/webview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="end of content"
+            android:textColor="#000"
+            android:background="#f0f"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
+

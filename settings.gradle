@@ -1,0 +1,3 @@
+include ':rigidwebview', ':sample'
+
+rootProject.name = POM_NAME

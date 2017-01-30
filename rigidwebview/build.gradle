@@ -1,0 +1,76 @@
+
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+    id "com.github.dcendents.android-maven" version "1.4.1"
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 23
+    }
+}
+
+dependencies {
+    provided 'com.android.support:support-annotations:23.3.0'
+}
+
+group = GROUP
+version = VERSION_NAME
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name POM_NAME
+            description POM_DESCRIPTION
+            url POM_URL
+            inceptionYear '2017'
+
+            packaging POM_PACKAGING
+            groupId GROUP
+            artifactId POM_ARTIFACT_ID
+            version VERSION_NAME
+
+            licenses {
+                license {
+                    name POM_LICENCE_NAME
+                    url POM_LICENCE_URL
+                    distribution POM_LICENCE_DIST
+                }
+            }
+            scm {
+                connection POM_SCM_CONNECTION
+                url POM_SCM_URL
+
+            }
+            developers {
+                developer {
+                    name POM_DEVELOPER_NAME
+                }
+            }
+        }
+    }
+}
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+
+    configurations = ['archives']
+    pkg {
+        repo = 'maven'
+        name = POM_NAME
+        userOrg = user
+        licenses = ['Apache-2.0']
+        vcsUrl = POM_SCM_URL
+        version {
+            name = VERSION_NAME
+            desc = POM_DESCRIPTION
+        }
+    }
+}
