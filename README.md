@@ -14,7 +14,7 @@ contents with percent-based height will force the WebView to infinitely expand (
 ## Gradle
 
 ```
-compile 'io.github.jisung:rigidwebview:1.0.0'
+compile 'io.github.jisung:rigidwebview:1.0.0' (not ready yet)
 ```
 
 ## License
