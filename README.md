@@ -4,7 +4,7 @@ RigidWebView
 # Intro
 
 This is an unofficial mirror for [RigidWebView](
-https://github.com/k9mail/k-9/blob/master/k9mail/src/main/java/com/fsck/k9/view/RigidWebView.java)
+https://github.com/k9mail/k-9/blob/master/k9mail/src/main/java/com/fsck/k9/view/RigidWebView.java) developed by k9mail team.
 
 A custom WebView that is robust to rapid resize events in sequence.
 This is useful for a WebView which needs to have a layout of `WRAP_CONTENT`, since any
@@ -14,7 +14,7 @@ contents with percent-based height will force the WebView to infinitely expand (
 ## Gradle
 
 ```
-compile 'io.github.jisung:rigidwebview:1.0.0' (not ready yet)
+compile 'io.github.jisung:rigidwebview:1.0.0'
 ```
 
 ## License
